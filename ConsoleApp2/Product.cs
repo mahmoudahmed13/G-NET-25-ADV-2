@@ -26,6 +26,17 @@
             foreach (Product product in products)
                 action(product);
         }
+
+        public static List<string> TransformProducts(List<Product> products, Func<Product,string> func)
+        {
+            var result = new List<string>();
+            foreach (Product product in products)
+            {
+
+                result.Add($"{product.Name} :{func.Invoke(product)}");
+            }
+            return result;
+        }
     }
 }
 

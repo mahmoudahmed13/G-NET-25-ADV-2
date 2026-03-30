@@ -1,4 +1,6 @@
-﻿namespace ConsoleApp2
+﻿using System.Reflection.Emit;
+
+namespace ConsoleApp2
 {
     internal class Program
     {
@@ -58,6 +60,21 @@
             //    $"| Price: ${product.Price} | Stock: {product.Stock}")); 
             #endregion
 
+            #region 3.2. Transform Products 
+
+            //Console.WriteLine("--- Summary List --- ");
+            //List<string> priceLabel = Product.TransformProducts(catalog, product => $" ${product.Price}");
+            //priceLabel.ForEach(Print);
+            //Console.WriteLine("--- Price Labels --- ");
+            //List<string> priceLabels = Product.TransformProducts(catalog, product => product.Price > 100 ? "Expensive" : "Affordable ");
+            //priceLabels.ForEach(Print); 
+            #endregion
+
+
+        }
+        public static void Print(string print)
+        {
+            Console.WriteLine(print);
         }
     }
 }
