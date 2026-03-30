@@ -1,4 +1,6 @@
-﻿namespace ConsoleApp2
+﻿using System;
+
+namespace ConsoleApp2
 {
     internal class Product
     {
@@ -34,6 +36,19 @@
             {
 
                 result.Add($"{product.Name} :{func.Invoke(product)}");
+            }
+            return result;
+        }
+        public static List<Product> FilterProducts(List<Product> products, Predicate<Product> filter)
+        {
+            var result = new List<Product>();
+            foreach (Product product in products)
+            {
+                if (filter(product))
+                {
+                    result.Add(product);
+                    //result.Add($"[LOW STOCK] {product.Name}: only {product.Stock} left!");
+                }
             }
             return result;
         }

@@ -16,7 +16,7 @@ namespace ConsoleApp2
                 new Product { Id=6, Name="Coffee Beans", Category="Food", Price=15, Stock=80 },
                 new Product { Id=7, Name="C# Book", Category="Books", Price=45, Stock=30 },
                 new Product { Id=8, Name="Novel", Category="Books", Price=20, Stock=60 },
-                new Product { Id=9,Name="Headphones", Category="Electronics", Price=150, Stock=40 }
+                new Product { Id=9,Name="Headphones", Category="Electronics", Price=150, Stock=15 }
             };
 
             #region Task01
@@ -70,11 +70,25 @@ namespace ConsoleApp2
             //priceLabels.ForEach(Print); 
             #endregion
 
+            #region 3.3. Filter Products
+
+            //List<Product> productsLowStack = Product.FilterProducts(catalog, product => product.Stock < 20);
+            //foreach (Product product in productsLowStack)
+            //{
+            //    LowStockAlert(product);
+            //} 
+            #endregion
 
         }
         public static void Print(string print)
         {
             Console.WriteLine(print);
         }
+        //[LOW STOCK] Laptop: only 10 left! 
+        public static void LowStockAlert(Product product)
+        {
+            Console.WriteLine($"[LOW STOCK] {product.Name} : only {product.Stock} left!");
+        }
+
     }
 }
