@@ -47,6 +47,17 @@
             //    Console.WriteLine(product);
             //} 
             #endregion
+
+            #region 3.1 Print Reports
+
+            //Console.WriteLine("--- Short Report --- ");
+            //Product.PrintReport(catalog, product => Console.WriteLine($"{product.Name} - ${product.Price}"));
+
+            //Console.WriteLine("--- Deltals Report --- ");
+            //Product.PrintReport(catalog, product => Console.WriteLine($"[{product.Category}]{product.Name} " +
+            //    $"| Price: ${product.Price} | Stock: {product.Stock}")); 
+            #endregion
+
         }
     }
 }

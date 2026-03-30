@@ -20,6 +20,12 @@
         }
 
         public override string ToString() => $"{Name} - ${Price} (Stoke: {Stock})";
+        public static void PrintReport(List<Product> products, Action<Product> action)
+        {
+
+            foreach (Product product in products)
+                action(product);
+        }
     }
 }
 
